@@ -8,7 +8,7 @@ import { Toaster } from "sonner";
 
 export default function Home() {
   return (
-    <div className="flex flex-col px-[5%] py-[5%] gap-[5rem] lg:gap-[8rem] text-foreground bg-background">
+    <div className="flex flex-col px-[5%] md:py-[5%] gap-[5rem] lg:gap-[8rem] text-foreground bg-background">
       <Toaster/>
       <Hero/>
       <Projects/>
