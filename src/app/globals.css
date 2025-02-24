@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-color: #ffffff;
+  --primary-color: #131313;
+  --main-color: #9618df;
+  --nav-color: hsla(0, 0%, 0%, 0.952);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --text-color: #ffffff;
+    --primary-color: #a6a6a6;
+    --main-color: #9618df;
+    --nav-color: hsla(0, 0%, 100%, 0.748);
+  }
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+body {
+  color: var(--text-color);
+  font-family: "outfit";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* globals.css */
+.firacode {
+  font-family: var(--font-fira-code), monospace;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(360deg, #141414, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.grid-col{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+}
+
+.line {
+  width: 50%;
+  height: 0.5px;
+  background: linear-gradient(90deg, red, yellow, green, blue, purple);
+  animation: electricFlow 2s linear infinite;
+  background-size: 200% 100%;
+}
+
+.line:first-child {
+  align-self: flex-start;
+}
+
+.line:last-child {
+  align-self: flex-end;
+}
+
+.text-gradient {
+  font-weight: bold;
+  background: linear-gradient(180deg, #141414, rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.border-style{
+  border-top: 1px dashed rgb(112, 112, 112);
+  border-bottom: 1px dashed rgb(112, 112, 112);
+  border-spacing: 10%;
+}
+
+.border-style2{
+  border-left: 1px dashed rgb(112, 112, 112);
+  border-right: 1px dashed rgb(112, 112, 112);
+  border-spacing: 10%;
+}
+
+.border-mine{
+  border: 1px solid grey;
+}
+
+.border-mine:hover{
+  border: 1px solid #ff00ff;
+}
+
+@keyframes electricFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --navcolor:0, 0%, 0%, 0.952;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0 3.5%;
+    --navcolor:0, 0%, 100%, 0.748;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.btn-shine {
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+  background-size: 200% auto;
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+}
+
+.insta{
+  background: linear-gradient(to right, #833ab4, #ff4d4d);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  60% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.grid-auto{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.left{
+  transform: translateX(2%);
+  transition:0.5s ease;
+}
