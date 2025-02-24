@@ -39,7 +39,7 @@ function Navbar({menu, setMenu}) {
         <Link className="hover:text-primary transition-all duration-500 text-foreground" href='/contact' onClick={openMenu}>Contact</Link>
         <div className="flex flex-col gap-4">
         <Link href={''}><Image className="bg-black w-[30px] h-[30px] p-1 rounded-sm cursor-pointer hover:bg-primary transition-all duration-700" src={github} alt="github"/></Link>
-        <ModeToggle/>
+        <ModeToggle />
         <Link className="p-2 px-[2rem] bg-primary rounded-sm hover:bg-foreground hover:text-background transition-all duration-700 flex items-center justify-center" href=''>Subscribe</Link>
     </div>
     </div>

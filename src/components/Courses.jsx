@@ -17,7 +17,7 @@ function Courses() {
                     })
                 }
             </div>
-            <button className=" w-[40%] h-[5vh] border-2 rounded-lg hover:bg-foreground hover:text-background transition-all duration-700">Explore more</button>
+            <button className=" w-[40%] h-[5vh] border-2 rounded-lg active:bg-foreground hover:text-background transition-all duration-700">Explore more</button>
             </div>
         </div>
     )
