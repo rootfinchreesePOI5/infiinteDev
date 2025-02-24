@@ -10,9 +10,9 @@ function Hero() {
     <div className="border-style2 p-6">
     <Link href={'/'} className='flex items-center justify-center text-foreground firacode border-[1px] p-2 px-6 hover:scale-105  transition-all duration-700'>visit my portfolio</Link>
     </div>
-    <div className="flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16 p-6 border-style  lg:w-[50%] justify-center items-center">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16 p-6 border-style w-full  lg:w-[50%] justify-center items-center">
     <Link href={'/components'} className='flex items-center justify-center  firacode bg-foreground text-indigo-500 p-2 w-full'>my components</Link>
-    <Link href={'/courses'} className='flex items-center justify-center  firacode border-[1px] bg-foreground text-indigo-50 p-2 w-full'>my courses</Link>
+    <Link href={'/courses'} className='flex items-center justify-center  firacode border-[1px] bg-foreground text-indigo-500 p-2 w-full'>my courses</Link>
     </div>
     <div className="bg-card border-[1px] p-8 rounded-md flex flex-col md:flex-row gap-6 items-center justify-between md:w-[80%]">
       <div className="text-center lg:w-[50%] flex flex-col gap-5">
